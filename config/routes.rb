@@ -1,5 +1,7 @@
 Hitokotode::Application.routes.draw do
   get "main/index"
+  get "index.html" => "main#index"
+  get "" => "main#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
