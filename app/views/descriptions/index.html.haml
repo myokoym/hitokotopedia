@@ -1,0 +1,34 @@
+%h1 一言で
+%p いろいろなものを一言で説明してください。 
+
+%table
+  %col
+  %col
+  - @descriptions.each do |d|
+    %tr
+      %th 対象
+      %th 作者
+      %th 説明
+    %tr
+      %td= d.subject
+      %td= d.author
+      %td= d.description
+
+- form_for @description do |f|
+  %p
+    = f.label "対象"
+    %br
+    = f.text_field :subject
+    %br
+  %p
+    = f.label "名前"
+    %br
+    = f.text_field :author
+    %br
+  %p
+    = f.label "説明"
+    %br
+    = f.text_area :description, :rows => 3
+    %br
+  = f.submit "送信"
+
