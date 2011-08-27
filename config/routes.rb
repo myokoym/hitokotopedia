@@ -1,6 +1,5 @@
 Hitokotode::Application.routes.draw do
-  get "descriptions/index"
-  get "" => "descriptions#index"
+  root :to => "descriptions#index"
   resources :descriptions
 
   # The priority is based upon order of creation:
