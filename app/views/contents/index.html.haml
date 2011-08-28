@@ -1,0 +1,27 @@
+%h1 一言で
+%p いろいろなものを一言で説明してください。 
+
+%h2 新着10件
+%table
+  %tr
+    %th 対象
+    %th 説明
+  - @descriptions.each do |d|
+    %tr
+      %td= d.subject
+      %td= d.description
+
+%h2 新規登録
+- form_for @description do |f|
+  %p
+    = f.label "対象"
+    %br
+    = f.text_field :subject
+    %br
+  %p
+    = f.label "説明"
+    %br
+    = f.text_area :description, :rows => 3
+    %br
+  = f.submit "送信"
+
