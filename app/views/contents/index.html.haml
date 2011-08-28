@@ -7,7 +7,7 @@
     %th 説明
   - @descriptions.each do |d|
     %tr
-      %td= d.subject
+      %td= link_to d.subject, :controller => :descriptions, :action => :index, :name => d.subject
       %td= d.description
 
 %h2 新規登録

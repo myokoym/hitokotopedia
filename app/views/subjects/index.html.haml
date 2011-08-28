@@ -1,20 +1,18 @@
-%h1 一言で
-%p いろいろなものを一言で説明してください。 
+%h1 一言で〇〇を説明してください。
 
 %table
   %tr
     %th 対象
-    %th 説明
-  - @descriptions.each do |d|
+  - @subjects.each do |s|
     %tr
-      %td= d.subject
-      %td= d.description
+      %td= link_to s.name, :controller => :subjects, :action => :show, :id => s.id
 
+%h2 新規登録
 - form_for @description do |f|
   %p
     = f.label "対象"
     %br
-    = f.text_field :subject, :value => @subject
+    = f.text_field :subject
     %br
   %p
     = f.label "説明"
