@@ -1,3 +1,3 @@
 class Subject < ActiveRecord::Base
-  has_many :describe
+  has_many :description
 end

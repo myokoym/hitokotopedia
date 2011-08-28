@@ -2,9 +2,9 @@ class CreateDescriptions < ActiveRecord::Migration
   def self.up
     create_table :descriptions do |t|
       t.integer :id
-      t.integer :subject
+      t.integer :subject_id
       t.text :description
-      t.integer :author
+      t.integer :author_id
 
       t.timestamps
     end
