@@ -1,5 +1,6 @@
 Hitokotode::Application.routes.draw do
-  root :to => "descriptions#index"
+  root :to => "contents#index"
+  resources :contents
   resources :descriptions
 
   # The priority is based upon order of creation:
