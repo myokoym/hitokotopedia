@@ -17,7 +17,7 @@ class DescriptionsController < ApplicationController
     unless @subject
       @subject = Subject.create(:name => params[:description][:subject])
     end
-    @description = Description.create(:description => params[:description][:description], :subject_id => @subject.id)
+    @description = Description.create(:description => params[:description][:description], :subject_id => @subject.id, :author_id => 1)
     redirect_to @subject
   end
 end

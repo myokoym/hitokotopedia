@@ -2,10 +2,9 @@
 
 %table
   %tr
-    %th 対象
   - @subjects.each do |s|
     %tr
-      %td= link_to s.name, :controller => :subjects, :action => :show, :id => s.id
+      %td= link_to s.name + " とは？", :controller => :subjects, :action => :show, :id => s.id
 
 %h2 新規登録
 - form_for @description do |f|

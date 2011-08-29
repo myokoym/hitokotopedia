@@ -3,12 +3,10 @@
 %h2 新着10件
 %table
   %tr
-    %th 対象
-    %th 説明
   - @descriptions.each do |d|
     %tr
       %td= link_to d.subject.name, :controller => :subjects, :action => :show, :id => d.subject.id
-      %td= d.description
+      %td= "← " + d.description
 
 %h2 新規登録
 - form_for @description do |f|
