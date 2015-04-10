@@ -134,6 +134,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
+    sqlite3 (1.3.10)
     test-unit (3.0.9)
       power_assert
     test-unit-activesupport (1.0.3)
@@ -185,6 +186,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
+  sqlite3
   test-unit-rails
   turbolinks
   uglifier (>= 1.3.0)
