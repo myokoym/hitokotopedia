@@ -1,0 +1,16 @@
+%h1= "一言で #{@subject.name} を説明すると？"
+
+%table
+  %tr
+  - @descriptions.each do |d|
+    %tr
+      %td= "「#{d.description}」"
+
+%h2 ・・・いやいや、
+= form_for @description do |f|
+  %p
+    = f.text_field :subject, value: @subject.name
+    は、
+  %p
+    = f.text_area :description, rows: 1
+  = f.submit "送信"
