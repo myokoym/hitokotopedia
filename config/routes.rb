@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root "descriptions#index"
+  root "subjects#index"
+
   resources :descriptions
   resources :subjects
 
