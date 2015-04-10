@@ -82,6 +82,7 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  database: hitokotopedia_production
+  database: db7ai6kvam0085
+  port: 5432
   username: hitokotopedia
   password: <%= ENV['HITOKOTOPEDIA_DATABASE_PASSWORD'] %>
